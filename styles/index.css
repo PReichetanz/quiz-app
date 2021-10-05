@@ -50,7 +50,7 @@ h1 {
   text-align: justify;
 }
 
-.buttonTurnCard {
+.button {
   display: block;
   margin: 1rem auto 0.5rem;
   padding: 0.5rem 1.5rem;
@@ -110,4 +110,23 @@ nav {
 .nav-item > a {
   color: inherit;
   text-decoration: none;
+}
+
+/* CREATING FORM */
+
+.submitForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 30rem;
+}
+
+label {
+  font-size: 1.25rem;
+}
+
+.submitForm > div {
+  display: flex;
+  flex-direction: column;
+  height: 25%;
 }
