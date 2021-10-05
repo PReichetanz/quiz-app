@@ -1,0 +1,35 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #293241;
+  color: #e0fbfc;
+  margin: 0;
+  height: 667px;
+  width: 375px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+h1 {
+  text-align: center;
+  border: 1px solid black;
+  margin: 0;
+  padding: 1.25rem;
+  text-transform: uppercase;
+}
+
+.card {
+  border: 1px solid black;
+}
+
+.navigation {
+  border: 1px solid black;
+  height: 4rem;
+}
+
+.navigation > ul {
+  display: flex;
+}
