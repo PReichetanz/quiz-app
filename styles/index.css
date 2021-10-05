@@ -102,6 +102,11 @@ nav {
   width: 25%;
 }
 
+.nav-itemActive {
+  background-color: #e0fbfc;
+  color: #293241;
+}
+
 .nav-item > a {
   color: inherit;
   text-decoration: none;
