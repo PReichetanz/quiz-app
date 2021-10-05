@@ -36,10 +36,14 @@ h1 {
   padding: 0.5rem;
 }
 
+.card + .card {
+  margin-top: 1rem;
+}
+
 .questions {
   width: 90%;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 1rem auto;
+  overflow: scroll;
 }
 
 .question {
