@@ -15,21 +15,69 @@ body {
 
 h1 {
   text-align: center;
-  border: 1px solid black;
+  border: 1px solid #ee6c4d;
   margin: 0;
   padding: 1.25rem;
   text-transform: uppercase;
 }
 
-.card {
-  border: 1px solid black;
+/* UTILITY */
+
+.mx-1rem {
+  margin: 0 1rem;
 }
+
+/* COMPONENTS*/
+
+/* QUESTION CARDS*/
+
+.card {
+  border: 1px solid #ee6c4d;
+  padding: 0.5rem;
+}
+
+.questions {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.question {
+  text-align: justify;
+}
+
+.buttonTurnCard {
+  display: block;
+  margin: 1rem auto 0.5rem;
+  padding: 0.5rem 1.5rem;
+  background-color: #3d5a80;
+  color: #e0fbfc;
+}
+
+.tagList {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  list-style: none;
+}
+
+.tagList > li {
+  display: flex;
+  align-self: center;
+  border: 1px solid #e0fbfc;
+  width: auto;
+  margin: 0 0.45rem;
+  padding: 0 0.5rem;
+  border-radius: 30px;
+}
+
+/* NAVIGATION */
 
 nav {
   display: flex;
   justify-content: center;
   align-items: stretch;
-  border: 1px solid black;
+  border: 1px solid #ee6c4d;
   height: 4rem;
 }
 
@@ -46,7 +94,7 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid #e0fbfc;
+  border: 1px solid #ee6c4d;
   width: 25%;
 }
 
