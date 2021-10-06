@@ -6,20 +6,76 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quiz-App</title>
     <link rel="stylesheet" href="/styles/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+      integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
+      crossorigin="anonymous"
+    />
   </head>
   <body>
     <h1>Quiz-App</h1>
-    <section>
-      <div class="card">Karte 1</div>
-      <div class="card">Karte 2</div>
-      <div class="card">Karte 3</div>
+    <section class="questions">
+      <div class="card">
+        <h2 class="question-header mx-1rem">Question:</h2>
+        <p class="question mx-1rem">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis
+          quaerat asperiores, eius alias doloribus ut doloremque laudantium
+          soluta ipsum enim!
+        </p>
+        <button class="button">Show Answer</button>
+        <ul class="tagList">
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JS</li>
+          <li>Clean Code</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2 class="question-header mx-1rem">Question:</h2>
+        <p class="question mx-1rem">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis
+          quaerat asperiores, eius alias doloribus ut doloremque laudantium
+          soluta ipsum enim!
+        </p>
+        <button class="button">Show Answer</button>
+        <ul class="tagList">
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JS</li>
+          <li>Clean Code</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2 class="question-header mx-1rem">Question:</h2>
+        <p class="question mx-1rem">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis
+          quaerat asperiores, eius alias doloribus ut doloremque laudantium
+          soluta ipsum enim!
+        </p>
+        <button class="button">Show Answer</button>
+        <ul class="tagList">
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JS</li>
+          <li>Clean Code</li>
+        </ul>
+      </div>
     </section>
-    <nav class="navigation">
-      <ul role="list">
-        <li><a href="index.html">Quiz-App</a></li>
-        <li><a href="#">Bookmarks</a></li>
-        <li><a href="#">Create</a></li>
-        <li><a href="#">Profile</a></li>
+    <nav>
+      <ul class="navigation" role="list">
+        <li class="nav-item nav-itemActive">
+          <a href="index.html"><i class="fas fa-home"></i>Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="bookmarks.html"><i class="fas fa-bookmark"></i>Bookmarks</a>
+        </li>
+        <li class="nav-item">
+          <a href="create.html"><i class="fas fa-plus"></i>Create</a>
+        </li>
+        <li class="nav-item">
+          <a href="profile.html"><i class="fas fa-user-circle"></i>Profile</a>
+        </li>
       </ul>
     </nav>
   </body>

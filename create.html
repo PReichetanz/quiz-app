@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create</title>
+    <link rel="stylesheet" href="/styles/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+      integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <h1>Create</h1>
+    <section class="questions">
+      <form class="submitForm" action="">
+        <div>
+          <label for="question">Add your question:</label>
+          <textarea name="question" id="question" cols="30" rows="5"></textarea>
+        </div>
+        <div>
+          <label for="answer">Add your answer:</label>
+          <textarea name="answer" id="answer" cols="30" rows="5"></textarea>
+        </div>
+        <div>
+          <label for="tags">Add related tags (separated by commas):</label>
+          <input type="text" id="tags" />
+        </div>
+        <input class="button" type="submit" value="Submit" />
+      </form>
+    </section>
+    <nav>
+      <ul class="navigation" role="list">
+        <li class="nav-item">
+          <a href="index.html"><i class="fas fa-home"></i>Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="bookmarks.html"><i class="fas fa-bookmark"></i>Bookmarks</a>
+        </li>
+        <li class="nav-item nav-itemActive">
+          <a href="create.html"><i class="fas fa-plus"></i>Create Card</a>
+        </li>
+        <li class="nav-item">
+          <a href="profile.html"><i class="fas fa-user-circle"></i>Profile</a>
+        </li>
+      </ul>
+    </nav>
+  </body>
+</html>
