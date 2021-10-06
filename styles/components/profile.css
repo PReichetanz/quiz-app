@@ -1,0 +1,31 @@
+.profile {
+  width: 90%;
+  margin: 1rem auto;
+}
+
+.introduction {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.introduction__name {
+  display: inline-block;
+  font-size: 1.5rem;
+}
+
+.introduction__image {
+  width: 50%;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.profile__header {
+  margin: 2rem 0 0;
+}
+
+.profile__about {
+  margin-top: 0;
+  text-align: justify;
+  font-style: italic;
+}

@@ -1,0 +1,19 @@
+/* CREATING CARD FORM COMPONENT */
+
+.creating-card-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 30rem;
+}
+
+.input-area {
+  display: flex;
+  flex-direction: column;
+  height: 25%;
+}
+
+.input-area__label {
+  font-size: 1.25rem;
+  margin: 1.5rem 0 0.5rem;
+}
