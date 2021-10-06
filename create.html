@@ -16,44 +16,60 @@
   <body>
     <h1>Create</h1>
     <section class="questions">
-      <form class="submitForm" action="">
-        <div>
-          <label for="question">Add your question:</label>
-          <textarea name="question" id="question" cols="30" rows="5"></textarea>
+      <form class="submit-form" action="">
+        <div class="input-area">
+          <label class="input-area__label" for="question"
+            >Add your question:</label
+          >
+          <textarea
+            name="question"
+            id="question"
+            cols="30"
+            rows="5"
+            placeholder="What is the original (i.e. latin/greek) plural of 'comma'?"
+          ></textarea>
         </div>
-        <div>
-          <label for="answer">Add your answer:</label>
-          <textarea name="answer" id="answer" cols="30" rows="5"></textarea>
+        <div class="input-area">
+          <label class="input-area__label" for="answer">Add your answer:</label>
+          <textarea
+            name="answer"
+            id="answer"
+            cols="30"
+            rows="5"
+            placeholder="commata"
+          ></textarea>
         </div>
-        <div>
-          <label for="tags">Add related tags (separated by commas):</label>
+        <div class="input-area">
+          <label class="input-area__label" for="tags"
+            >Add related tags (separated by commas):</label
+          >
           <input type="text" id="tags" />
         </div>
-        <input class="button" type="submit" value="Submit" />
+        <input class="button button--hover" type="submit" value="Submit" />
       </form>
     </section>
     <nav class="navigation">
       <ul role="list">
         <li class="nav-item">
-          <a href="index.html"
+          <a class="c-inherit" href="index.html"
             ><i class="fas fa-home nav-item__icon"></i
             ><span class="sr-only">Home</span></a
           >
         </li>
         <li class="nav-item">
-          <a href="bookmarks.html"
+          <a class="c-inherit" href="bookmarks.html"
             ><i class="fas fa-bookmark nav-item__icon"></i
             ><span class="sr-only">Bookmarks</span></a
           >
         </li>
         <li class="nav-item">
-          <a href="create.html"
+          <a class="c-inherit" href="create.html"
             ><i class="fas fa-plus nav-item__icon nav-item--active"></i
             ><span class="sr-only">Create Card</span></a
           >
         </li>
         <li class="nav-item">
-          <a href="profile.html"
+          <a class="c-inherit" href="profile.html"
             ><i class="fas fa-user-circle nav-item__icon"></i
             ><span class="sr-only">Profile</span></a
           >
