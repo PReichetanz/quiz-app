@@ -56,6 +56,11 @@ h1 {
   color: #e0fbfc;
 }
 
+.button:hover {
+  background-color: #e0fbfc;
+  color: #293241;
+}
+
 .tagList {
   display: flex;
   justify-content: center;
@@ -127,4 +132,42 @@ label {
   display: flex;
   flex-direction: column;
   height: 25%;
+}
+
+/* PROFILE */
+
+.profile {
+  width: 90%;
+  margin: 1rem auto;
+}
+
+.profile-PictureName {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.profile-name {
+  display: inline-block;
+  font-size: 1.5rem;
+}
+
+.card-image {
+  width: 50%;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.profile > h2 {
+  margin: 2rem 0 0;
+}
+
+.profile > p {
+  margin-top: 0;
+  text-align: justify;
+}
+
+.buttonLogout {
+  padding: 1rem 2rem;
+  margin-top: 2rem;
 }
