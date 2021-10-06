@@ -6,11 +6,9 @@ body {
   background-color: #293241;
   color: #e0fbfc;
   margin: 0;
-  height: 667px;
-  width: 375px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  display: grid;
+  grid-template-rows: 60px auto 60px;
+  height: 100vh;
 }
 
 h1 {
@@ -43,7 +41,7 @@ h1 {
 .questions {
   width: 90%;
   margin: 1rem auto;
-  overflow: scroll;
+  overflow-y: auto;
 }
 
 .question {
