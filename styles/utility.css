@@ -1,0 +1,9 @@
+/* UTILITY SELECTORS */
+
+.mx-1rem {
+  margin: 0 1rem;
+}
+
+.c-inherit {
+  color: inherit;
+}

@@ -1,0 +1,27 @@
+/* CARD COMPONENT */
+
+.card {
+  border: 1px solid var(--color-red);
+  margin: 0.5rem;
+}
+
+.card__question {
+  text-align: justify;
+}
+
+.tag-list {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  list-style: none;
+}
+
+.tag-list > li {
+  display: flex;
+  align-self: center;
+  border: 1px solid var(--color-light);
+  width: auto;
+  margin: 0 0.45rem;
+  padding: 0 0.5rem;
+  border-radius: 30px;
+}
