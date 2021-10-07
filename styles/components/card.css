@@ -3,10 +3,18 @@
 .card {
   border: 1px solid var(--color-red);
   margin: 0.5rem;
+  position: relative;
 }
 
 .card__question {
   text-align: justify;
+}
+
+.card__bookmark {
+  position: absolute;
+  top: -8px;
+  right: 5px;
+  font-size: 2rem;
 }
 
 .tag-list {
