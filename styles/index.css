@@ -2,6 +2,7 @@
 @import "/styles/theme.css";
 @import "/styles/utility.css";
 
+/* COMPONENTS */
 @import "/styles/components/button.css";
 @import "/styles/components/card.css";
 @import "/styles/components/navigation.css";
