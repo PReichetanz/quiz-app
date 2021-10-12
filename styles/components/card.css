@@ -6,14 +6,16 @@
   position: relative;
 }
 
+.card + .card {
+  margin-top: 1rem;
+}
+
 .card__question-text {
   text-align: justify;
 }
 
 .card__bookmark {
   border: none;
-  /* width: 30px;
-  height: 10px; */
   background-color: transparent;
   position: absolute;
   top: -5px;

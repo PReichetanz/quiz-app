@@ -34,6 +34,8 @@ const bookmarkIcon = document.querySelector(".js-bookmark-icon");
 const createIcon = document.querySelector(".js-create-icon");
 const profileIcon = document.querySelector(".js-profile-icon");
 
+const heading = document.querySelector(".js-heading");
+
 homeButton.addEventListener("click", () => {
   homeSection.classList.remove("hidden");
   bookmarkSection.classList.add("hidden");
@@ -44,6 +46,8 @@ homeButton.addEventListener("click", () => {
   bookmarkIcon.classList.remove("nav-item--active");
   createIcon.classList.remove("nav-item--active");
   profileIcon.classList.remove("nav-item--active");
+
+  heading.textContent = "Quiz-App";
 });
 
 bookmarksButton.addEventListener("click", () => {
@@ -56,6 +60,8 @@ bookmarksButton.addEventListener("click", () => {
   bookmarkIcon.classList.add("nav-item--active");
   createIcon.classList.remove("nav-item--active");
   profileIcon.classList.remove("nav-item--active");
+
+  heading.textContent = "Bookmarks";
 });
 
 createButton.addEventListener("click", () => {
@@ -68,6 +74,8 @@ createButton.addEventListener("click", () => {
   bookmarkIcon.classList.remove("nav-item--active");
   createIcon.classList.add("nav-item--active");
   profileIcon.classList.remove("nav-item--active");
+
+  heading.textContent = "Create Question";
 });
 
 profileButton.addEventListener("click", () => {
@@ -80,6 +88,8 @@ profileButton.addEventListener("click", () => {
   bookmarkIcon.classList.remove("nav-item--active");
   createIcon.classList.remove("nav-item--active");
   profileIcon.classList.add("nav-item--active");
+
+  heading.textContent = "Profile";
 });
 
 /* SET NAVIGATION ACTIVE BUTTON */
