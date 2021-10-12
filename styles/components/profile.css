@@ -3,18 +3,18 @@
   margin: 1rem auto;
 }
 
-.introduction {
+.profile-introduction {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
 }
 
-.introduction__name {
+.profile__name {
   display: inline-block;
   font-size: 1.5rem;
 }
 
-.introduction__image {
+.profile__image {
   width: 50%;
   border-radius: 50%;
   display: inline-block;

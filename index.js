@@ -42,10 +42,10 @@ homeButton.addEventListener("click", () => {
   createSection.classList.add("hidden");
   profileSection.classList.add("hidden");
 
-  homeIcon.classList.add("nav-item--active");
-  bookmarkIcon.classList.remove("nav-item--active");
-  createIcon.classList.remove("nav-item--active");
-  profileIcon.classList.remove("nav-item--active");
+  homeIcon.classList.add("navigation-item--active");
+  bookmarkIcon.classList.remove("navigation-item--active");
+  createIcon.classList.remove("navigation-item--active");
+  profileIcon.classList.remove("navigation-item--active");
 
   heading.textContent = "Quiz-App";
 });
@@ -56,10 +56,10 @@ bookmarksButton.addEventListener("click", () => {
   createSection.classList.add("hidden");
   profileSection.classList.add("hidden");
 
-  homeIcon.classList.remove("nav-item--active");
-  bookmarkIcon.classList.add("nav-item--active");
-  createIcon.classList.remove("nav-item--active");
-  profileIcon.classList.remove("nav-item--active");
+  homeIcon.classList.remove("navigation-item--active");
+  bookmarkIcon.classList.add("navigation-item--active");
+  createIcon.classList.remove("navigation-item--active");
+  profileIcon.classList.remove("navigation-item--active");
 
   heading.textContent = "Bookmarks";
 });
@@ -70,10 +70,10 @@ createButton.addEventListener("click", () => {
   createSection.classList.remove("hidden");
   profileSection.classList.add("hidden");
 
-  homeIcon.classList.remove("nav-item--active");
-  bookmarkIcon.classList.remove("nav-item--active");
-  createIcon.classList.add("nav-item--active");
-  profileIcon.classList.remove("nav-item--active");
+  homeIcon.classList.remove("navigation-item--active");
+  bookmarkIcon.classList.remove("navigation-item--active");
+  createIcon.classList.add("navigation-item--active");
+  profileIcon.classList.remove("navigation-item--active");
 
   heading.textContent = "Create Question";
 });
@@ -84,10 +84,10 @@ profileButton.addEventListener("click", () => {
   createSection.classList.add("hidden");
   profileSection.classList.remove("hidden");
 
-  homeIcon.classList.remove("nav-item--active");
-  bookmarkIcon.classList.remove("nav-item--active");
-  createIcon.classList.remove("nav-item--active");
-  profileIcon.classList.add("nav-item--active");
+  homeIcon.classList.remove("navigation-item--active");
+  bookmarkIcon.classList.remove("navigation-item--active");
+  createIcon.classList.remove("navigation-item--active");
+  profileIcon.classList.add("navigation-item--active");
 
   heading.textContent = "Profile";
 });
