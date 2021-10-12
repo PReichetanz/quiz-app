@@ -11,10 +11,31 @@
 }
 
 .card__bookmark {
+  border: none;
+  /* width: 30px;
+  height: 10px; */
+  background-color: transparent;
   position: absolute;
-  top: -8px;
-  right: 5px;
+  top: -5px;
+  right: 10px;
+}
+
+.card__bookmark-icon {
+  color: var(--color-light);
   font-size: 2rem;
+}
+
+/* .card__bookmark::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 100%;
+  border: 10px solid var(--color-light);
+  border-bottom-color: transparent; 
+} */
+
+.card__bookmark--active {
+  color: var(--color-mediumblue);
 }
 
 .card__tag-list {
