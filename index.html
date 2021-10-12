@@ -18,6 +18,7 @@
     <h1>Quiz-App</h1>
     <section class="questions">
       <div class="card">
+        <button class="card__bookmark"></button>
         <i class="card__bookmark fas fa-bookmark"></i>
         <h2 class="mx-1rem">Question:</h2>
         <p class="card__question-text mx-1rem">
@@ -25,9 +26,15 @@
           quaerat asperiores, eius alias doloribus ut doloremque laudantium
           soluta ipsum enim!
         </p>
-        <button class="card__toggle-answer-button">Show Answer</button>
-        <h2 class="card__answer-heading hidden mx-1rem">Answer:</h2>
-        <p class="card__answer-text hidden mx-1rem">The answer is 42.</p>
+        <button class="card__toggle-answer-button js-toggle-answer">
+          Show Answer
+        </button>
+        <h2 class="card__answer-heading js-answer-heading hidden mx-1rem">
+          Answer:
+        </h2>
+        <p class="card__answer-text js-answer-text hidden mx-1rem">
+          The answer is 42.
+        </p>
         <ul class="card__tag-list">
           <li>HTML</li>
           <li>CSS</li>
