@@ -3,9 +3,3 @@
 .card + .card {
   margin-top: 1rem;
 }
-
-.questions {
-  width: 90%;
-  margin: 0.5rem auto 0;
-  overflow-y: auto;
-}

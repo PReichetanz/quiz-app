@@ -15,117 +15,236 @@
     <script src="index.js" defer></script>
   </head>
   <body>
-    <h1>Quiz-App</h1>
-    <section class="questions">
-      <div class="card">
-        <button class="card__bookmark">
-          <i
-            class="
-              card__bookmark card__bookmark-icon
-              fas
-              fa-bookmark
-              js-bookmark
-            "
-          ></i>
-        </button>
-        <h2 class="mx-1rem">Question:</h2>
-        <p class="card__question-text mx-1rem">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis
-          quaerat asperiores, eius alias doloribus ut doloremque laudantium
-          soluta ipsum enim!
+    <h1 class="heading">Quiz-App</h1>
+    <main>
+      <section class="js-questions">
+        <div class="card">
+          <button class="card__bookmark">
+            <i
+              class="
+                card__bookmark card__bookmark-icon
+                fas
+                fa-bookmark
+                js-bookmark
+              "
+            ></i>
+          </button>
+          <h2 class="mx-1rem">Question:</h2>
+          <p class="card__question-text mx-1rem">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis
+            quaerat asperiores, eius alias doloribus ut doloremque laudantium
+            soluta ipsum enim!
+          </p>
+          <button class="card__toggle-answer-button js-toggle-answer">
+            Show Answer
+          </button>
+          <h2 class="card__answer-heading js-answer-heading hidden mx-1rem">
+            Answer:
+          </h2>
+          <p class="card__answer-text js-answer-text hidden mx-1rem">
+            The answer is 42.
+          </p>
+          <ul class="card__tag-list">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JS</li>
+            <li>Clean Code</li>
+          </ul>
+        </div>
+        <div class="card">
+          <button class="card__bookmark">
+            <i
+              class="
+                card__bookmark card__bookmark-icon
+                fas
+                fa-bookmark
+                js-bookmark
+              "
+            ></i>
+          </button>
+          <h2 class="mx-1rem">Question:</h2>
+          <p class="card__question mx-1rem">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis
+            quaerat asperiores, eius alias doloribus ut doloremque laudantium
+            soluta ipsum enim!
+          </p>
+          <button class="card__toggle-answer-button">Show Answer</button>
+          <ul class="card__tag-list">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JS</li>
+            <li>Clean Code</li>
+          </ul>
+        </div>
+        <div class="card">
+          <button class="card__bookmark">
+            <i
+              class="
+                card__bookmark card__bookmark-icon
+                fas
+                fa-bookmark
+                js-bookmark
+              "
+            ></i>
+          </button>
+          <h2 class="mx-1rem">Question:</h2>
+          <p class="card__question mx-1rem">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis
+            quaerat asperiores, eius alias doloribus ut doloremque laudantium
+            soluta ipsum enim!
+          </p>
+          <button class="card__toggle-answer-button">Show Answer</button>
+          <ul class="card__tag-list">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JS</li>
+            <li>Clean Code</li>
+          </ul>
+        </div>
+      </section>
+      <section class="js-bookmarks hidden">
+        <div class="card">
+          <i class="card__bookmark fas fa-bookmark"></i>
+          <h2 class="mx-1rem">Question:</h2>
+          <p class="card__question mx-1rem">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis
+            quaerat asperiores, eius alias doloribus ut doloremque laudantium
+            soluta ipsum enim!
+          </p>
+          <button class="button button--hover">Show Answer</button>
+          <ul class="tag-list">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JS</li>
+            <li>Clean Code</li>
+          </ul>
+        </div>
+        <div class="card">
+          <i class="card__bookmark fas fa-bookmark"></i>
+          <h2 class="mx-1rem">Question:</h2>
+          <p class="card__question mx-1rem">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis
+            quaerat asperiores, eius alias doloribus ut doloremque laudantium
+            soluta ipsum enim!
+          </p>
+          <button class="button button--hover">Show Answer</button>
+          <ul class="tag-list">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JS</li>
+            <li>Clean Code</li>
+          </ul>
+        </div>
+        <div class="card">
+          <i class="card__bookmark fas fa-bookmark"></i>
+          <h2 class="mx-1rem">Question:</h2>
+          <p class="card__question mx-1rem">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis
+            quaerat asperiores, eius alias doloribus ut doloremque laudantium
+            soluta ipsum enim!
+          </p>
+          <button class="button button--hover">Show Answer</button>
+          <ul class="tag-list">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JS</li>
+            <li>Clean Code</li>
+          </ul>
+        </div>
+      </section>
+      <section class="js-create hidden">
+        <span id="creating-card" class="sr-only">Creating Card Form</span>
+        <form
+          class="creating-card-form"
+          action=""
+          aria-labelledby="creating-card"
+        >
+          <div class="input-area">
+            <label class="input-area__label" for="question"
+              >Add your question:</label
+            >
+            <textarea
+              name="question"
+              id="question"
+              cols="30"
+              rows="5"
+              placeholder="What is the original (i.e. latin/greek) plural of 'comma'?"
+            ></textarea>
+          </div>
+          <div class="input-area">
+            <label class="input-area__label" for="answer"
+              >Add your answer:</label
+            >
+            <textarea
+              name="answer"
+              id="answer"
+              cols="30"
+              rows="5"
+              placeholder="commata"
+            ></textarea>
+          </div>
+          <div class="input-area">
+            <label class="input-area__label" for="tags"
+              >Add related tags (separated by commas):</label
+            >
+            <input type="text" id="tags" />
+          </div>
+          <input class="button button--hover" type="submit" value="Submit" />
+        </form>
+      </section>
+      <section class="js-profile hidden">
+        <div class="introduction">
+          <img
+            class="introduction__image"
+            src="https://source.unsplash.com/featured/300x300?portrait"
+            alt=""
+          />
+          <span class="introduction__name">Paul Reichetanz</span>
+        </div>
+        <h2 class="profile__header">About myself</h2>
+        <p class="profile__about">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor
+          ratione inventore voluptatem reprehenderit laborum autem iste odio
+          corporis id ipsa magnam repellat repellendus, beatae amet, odit
+          recusandae soluta repudiandae consectetur?
         </p>
-        <button class="card__toggle-answer-button js-toggle-answer">
-          Show Answer
-        </button>
-        <h2 class="card__answer-heading js-answer-heading hidden mx-1rem">
-          Answer:
-        </h2>
-        <p class="card__answer-text js-answer-text hidden mx-1rem">
-          The answer is 42.
-        </p>
-        <ul class="card__tag-list">
+        <h2 class="profile__header">My Skills</h2>
+        <ul class="tag-list">
           <li>HTML</li>
           <li>CSS</li>
           <li>JS</li>
           <li>Clean Code</li>
         </ul>
-      </div>
-      <div class="card">
-        <button class="card__bookmark">
-          <i
-            class="
-              card__bookmark card__bookmark-icon
-              fas
-              fa-bookmark
-              js-bookmark
-            "
-          ></i>
-        </button>
-        <h2 class="mx-1rem">Question:</h2>
-        <p class="card__question mx-1rem">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis
-          quaerat asperiores, eius alias doloribus ut doloremque laudantium
-          soluta ipsum enim!
-        </p>
-        <button class="card__toggle-answer-button">Show Answer</button>
-        <ul class="card__tag-list">
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>JS</li>
-          <li>Clean Code</li>
-        </ul>
-      </div>
-      <div class="card">
-        <button class="card__bookmark">
-          <i
-            class="
-              card__bookmark card__bookmark-icon
-              fas
-              fa-bookmark
-              js-bookmark
-            "
-          ></i>
-        </button>
-        <h2 class="mx-1rem">Question:</h2>
-        <p class="card__question mx-1rem">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis
-          quaerat asperiores, eius alias doloribus ut doloremque laudantium
-          soluta ipsum enim!
-        </p>
-        <button class="card__toggle-answer-button">Show Answer</button>
-        <ul class="card__tag-list">
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>JS</li>
-          <li>Clean Code</li>
-        </ul>
-      </div>
-    </section>
+        <button class="button button--logout button--hover">Logout</button>
+      </section>
+    </main>
     <nav class="navigation">
       <ul role="list">
         <li class="nav-item">
-          <a class="c-inherit" href="index.html"
-            ><i class="fas fa-home nav-item__icon nav-item--active"></i
-            ><span class="sr-only">Home</span></a
-          >
+          <button class="color-inherit js-home-button">
+            <i
+              class="fas fa-home nav-item__icon js-home-icon nav-item--active"
+            ></i
+            ><span class="sr-only">Home</span>
+          </button>
         </li>
         <li class="nav-item">
-          <a class="c-inherit" href="bookmarks.html"
-            ><i class="fas fa-bookmark nav-item__icon"></i
-            ><span class="sr-only">Bookmarks</span></a
-          >
+          <button class="color-inherit js-bookmark-button">
+            <i class="fas fa-bookmark nav-item__icon js-bookmark-icon"></i
+            ><span class="sr-only">Bookmarks</span>
+          </button>
         </li>
         <li class="nav-item">
-          <a class="c-inherit" href="create.html"
-            ><i class="fas fa-plus nav-item__icon"></i
-            ><span class="sr-only">Create Card</span></a
-          >
+          <button class="color-inherit js-create-button">
+            <i class="fas fa-plus nav-item__icon js-create-icon"></i
+            ><span class="sr-only">Create Card</span>
+          </button>
         </li>
         <li class="nav-item">
-          <a class="c-inherit" href="profile.html"
-            ><i class="fas fa-user-circle nav-item__icon"></i
-            ><span class="sr-only">Profile</span></a
-          >
+          <button class="color-inherit js-profile-button">
+            <i class="fas fa-user-circle nav-item__icon js-profile-icon"></i
+            ><span class="sr-only">Profile</span>
+          </button>
         </li>
       </ul>
     </nav>

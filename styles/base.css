@@ -12,6 +12,7 @@ body {
   display: grid;
   grid-template-rows: 60px auto 60px;
   height: 100vh;
+  overflow-y: auto;
 }
 
 h1 {
@@ -21,4 +22,10 @@ h1 {
   padding: 1rem;
   text-transform: uppercase;
   align-self: center;
+}
+
+main {
+  width: 90%;
+  margin: 0.5rem auto 0;
+  overflow-y: auto;
 }
