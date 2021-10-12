@@ -121,7 +121,7 @@
             soluta ipsum enim!
           </p>
           <button class="card__toggle-answer-button">Show Answer</button>
-          <ul class="tag-list">
+          <ul class="card__tag-list">
             <li>HTML</li>
             <li>CSS</li>
             <li>JS</li>
@@ -146,7 +146,7 @@
             soluta ipsum enim!
           </p>
           <button class="card__toggle-answer-button">Show Answer</button>
-          <ul class="tag-list">
+          <ul class="card__tag-list">
             <li>HTML</li>
             <li>CSS</li>
             <li>JS</li>
@@ -171,7 +171,7 @@
             soluta ipsum enim!
           </p>
           <button class="card__toggle-answer-button">Show Answer</button>
-          <ul class="tag-list">
+          <ul class="card__tag-list">
             <li>HTML</li>
             <li>CSS</li>
             <li>JS</li>
@@ -186,8 +186,8 @@
           action=""
           aria-labelledby="creating-card"
         >
-          <div class="input-area">
-            <label class="input-area__label" for="question"
+          <div class="creating-card__input-area">
+            <label class="creating-card__input-label" for="question"
               >Add your question:</label
             >
             <textarea
@@ -198,8 +198,8 @@
               placeholder="What is the original (i.e. latin/greek) plural of 'comma'?"
             ></textarea>
           </div>
-          <div class="input-area">
-            <label class="input-area__label" for="answer"
+          <div class="creating-card__input-area">
+            <label class="creating-card__input-label" for="answer"
               >Add your answer:</label
             >
             <textarea
@@ -210,13 +210,17 @@
               placeholder="commata"
             ></textarea>
           </div>
-          <div class="input-area">
-            <label class="input-area__label" for="tags"
+          <div class="creating-card__input-area">
+            <label class="creating-card__input-label" for="tags"
               >Add related tags (separated by commas):</label
             >
-            <input type="text" id="tags" />
+            <input type="text" id="tags" placeholder="semicolon, colon" />
           </div>
-          <input class="button button--hover" type="submit" value="Submit" />
+          <input
+            class="creating-card__submit-button"
+            type="submit"
+            value="Add question"
+          />
         </form>
       </section>
       <section class="js-profile hidden">
@@ -236,13 +240,13 @@
           recusandae soluta repudiandae consectetur?
         </p>
         <h2 class="profile__header">My Skills</h2>
-        <ul class="tag-list">
+        <ul class="card__tag-list">
           <li>HTML</li>
           <li>CSS</li>
           <li>JS</li>
           <li>Clean Code</li>
         </ul>
-        <button class="button button--logout button--hover">Logout</button>
+        <button class="profile__logout-button">Logout</button>
       </section>
     </main>
     <nav class="navigation">

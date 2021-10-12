@@ -25,15 +25,6 @@
   font-size: 2rem;
 }
 
-/* .card__bookmark::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 100%;
-  border: 10px solid var(--color-light);
-  border-bottom-color: transparent; 
-} */
-
 .card__bookmark--active {
   color: var(--color-mediumblue);
 }
