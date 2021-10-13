@@ -12,20 +12,38 @@
       integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
       crossorigin="anonymous"
     />
+    <script src="index.js" defer></script>
   </head>
   <body>
     <h1>Quiz-App</h1>
     <section class="questions">
       <div class="card">
-        <i class="card__bookmark fas fa-bookmark"></i>
+        <button class="card__bookmark">
+          <i
+            class="
+              card__bookmark card__bookmark-icon
+              fas
+              fa-bookmark
+              js-bookmark
+            "
+          ></i>
+        </button>
         <h2 class="mx-1rem">Question:</h2>
-        <p class="card__question mx-1rem">
+        <p class="card__question-text mx-1rem">
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis
           quaerat asperiores, eius alias doloribus ut doloremque laudantium
           soluta ipsum enim!
         </p>
-        <button class="button button--hover">Show Answer</button>
-        <ul class="tag-list">
+        <button class="card__toggle-answer-button js-toggle-answer">
+          Show Answer
+        </button>
+        <h2 class="card__answer-heading js-answer-heading hidden mx-1rem">
+          Answer:
+        </h2>
+        <p class="card__answer-text js-answer-text hidden mx-1rem">
+          The answer is 42.
+        </p>
+        <ul class="card__tag-list">
           <li>HTML</li>
           <li>CSS</li>
           <li>JS</li>
@@ -33,15 +51,24 @@
         </ul>
       </div>
       <div class="card">
-        <i class="card__bookmark fas fa-bookmark"></i>
+        <button class="card__bookmark">
+          <i
+            class="
+              card__bookmark card__bookmark-icon
+              fas
+              fa-bookmark
+              js-bookmark
+            "
+          ></i>
+        </button>
         <h2 class="mx-1rem">Question:</h2>
         <p class="card__question mx-1rem">
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis
           quaerat asperiores, eius alias doloribus ut doloremque laudantium
           soluta ipsum enim!
         </p>
-        <button class="button button--hover">Show Answer</button>
-        <ul class="tag-list">
+        <button class="card__toggle-answer-button">Show Answer</button>
+        <ul class="card__tag-list">
           <li>HTML</li>
           <li>CSS</li>
           <li>JS</li>
@@ -49,15 +76,24 @@
         </ul>
       </div>
       <div class="card">
-        <i class="card__bookmark fas fa-bookmark"></i>
+        <button class="card__bookmark">
+          <i
+            class="
+              card__bookmark card__bookmark-icon
+              fas
+              fa-bookmark
+              js-bookmark
+            "
+          ></i>
+        </button>
         <h2 class="mx-1rem">Question:</h2>
         <p class="card__question mx-1rem">
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis
           quaerat asperiores, eius alias doloribus ut doloremque laudantium
           soluta ipsum enim!
         </p>
-        <button class="button button--hover">Show Answer</button>
-        <ul class="tag-list">
+        <button class="card__toggle-answer-button">Show Answer</button>
+        <ul class="card__tag-list">
           <li>HTML</li>
           <li>CSS</li>
           <li>JS</li>
