@@ -15,18 +15,13 @@
     <script src="index.js" defer></script>
   </head>
   <body>
-    <h1 class="js-heading" data-js="mainHeading">Quiz-App</h1>
+    <h1 data-js="mainHeading">Quiz-App</h1>
     <main>
       <section data-js="questions">
         <div class="card" data-js="card">
           <button class="card__bookmark">
             <i
-              class="
-                card__bookmark card__bookmark-icon
-                fas
-                fa-bookmark
-                js-bookmark
-              "
+              class="card__bookmark card__bookmark-icon fas fa-bookmark"
               data-js="bookmark"
             ></i>
           </button>
@@ -40,15 +35,12 @@
             Show Answer
           </button>
           <h2
-            class="card__answer-heading js-answer-heading hidden mx-1rem"
+            class="card__answer-heading hidden mx-1rem"
             data-js="answer-heading"
           >
             Answer:
           </h2>
-          <p
-            class="card__answer-text js-answer-text hidden mx-1rem"
-            data-js="answer"
-          >
+          <p class="card__answer-text hidden mx-1rem" data-js="answer">
             The answer is 42.
           </p>
           <ul class="card__tag-list">
@@ -61,12 +53,7 @@
         <div class="card" data-js="card">
           <button class="card__bookmark">
             <i
-              class="
-                card__bookmark card__bookmark-icon
-                fas
-                fa-bookmark
-                js-bookmark
-              "
+              class="card__bookmark card__bookmark-icon fas fa-bookmark"
               data-js="bookmark"
             ></i>
           </button>
@@ -80,15 +67,12 @@
             Show Answer
           </button>
           <h2
-            class="card__answer-heading js-answer-heading hidden mx-1rem"
+            class="card__answer-heading hidden mx-1rem"
             data-js="answer-heading"
           >
             Answer:
           </h2>
-          <p
-            class="card__answer-text js-answer-text hidden mx-1rem"
-            data-js="answer"
-          >
+          <p class="card__answer-text hidden mx-1rem" data-js="answer">
             The answer is 42.
           </p>
           <ul class="card__tag-list">
@@ -101,12 +85,7 @@
         <div class="card" data-js="card">
           <button class="card__bookmark">
             <i
-              class="
-                card__bookmark card__bookmark-icon
-                fas
-                fa-bookmark
-                js-bookmark
-              "
+              class="card__bookmark card__bookmark-icon fas fa-bookmark"
               data-js="bookmark"
             ></i>
           </button>
@@ -120,15 +99,12 @@
             Show Answer
           </button>
           <h2
-            class="card__answer-heading js-answer-heading hidden mx-1rem"
+            class="card__answer-heading hidden mx-1rem"
             data-js="answer-heading"
           >
             Answer:
           </h2>
-          <p
-            class="card__answer-text js-answer-text hidden mx-1rem"
-            data-js="answer"
-          >
+          <p class="card__answer-text hidden mx-1rem" data-js="answer">
             The answer is 42.
           </p>
           <ul class="card__tag-list">
@@ -143,21 +119,19 @@
         <div class="card">
           <button class="card__bookmark">
             <i
-              class="
-                card__bookmark card__bookmark-icon
-                fas
-                fa-bookmark
-                js-bookmark
-              "
+              class="card__bookmark card__bookmark-icon fas fa-bookmark"
+              data-js="bookmark"
             ></i>
           </button>
-          <h2 class="mx-1rem">Question:</h2>
-          <p class="card__question mx-1rem">
+          <h2 class="mx-1rem" data-js="answer-heading">Question:</h2>
+          <p class="card__question mx-1rem" data-js="answer">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis
             quaerat asperiores, eius alias doloribus ut doloremque laudantium
             soluta ipsum enim!
           </p>
-          <button class="card__toggle-answer-button">Show Answer</button>
+          <button class="card__toggle-answer-button" data-js="toggle-answer">
+            Show Answer
+          </button>
           <ul class="card__tag-list">
             <li>HTML</li>
             <li>CSS</li>
@@ -168,21 +142,19 @@
         <div class="card">
           <button class="card__bookmark">
             <i
-              class="
-                card__bookmark card__bookmark-icon
-                fas
-                fa-bookmark
-                js-bookmark
-              "
+              class="card__bookmark card__bookmark-icon fas fa-bookmark"
+              data-js="bookmark"
             ></i>
           </button>
-          <h2 class="mx-1rem">Question:</h2>
-          <p class="card__question mx-1rem">
+          <h2 class="mx-1rem" data-js="answer-heading">Question:</h2>
+          <p class="card__question mx-1rem" data-js="answer">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis
             quaerat asperiores, eius alias doloribus ut doloremque laudantium
             soluta ipsum enim!
           </p>
-          <button class="card__toggle-answer-button">Show Answer</button>
+          <button class="card__toggle-answer-button" data-js="toggle-answer">
+            Show Answer
+          </button>
           <ul class="card__tag-list">
             <li>HTML</li>
             <li>CSS</li>
@@ -193,21 +165,19 @@
         <div class="card">
           <button class="card__bookmark">
             <i
-              class="
-                card__bookmark card__bookmark-icon
-                fas
-                fa-bookmark
-                js-bookmark
-              "
+              class="card__bookmark card__bookmark-icon fas fa-bookmark"
+              data-js="bookmark"
             ></i>
           </button>
-          <h2 class="mx-1rem">Question:</h2>
-          <p class="card__question mx-1rem">
+          <h2 class="mx-1rem" data-js="answer-heading">Question:</h2>
+          <p class="card__question mx-1rem" data-js="answer">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis
             quaerat asperiores, eius alias doloribus ut doloremque laudantium
             soluta ipsum enim!
           </p>
-          <button class="card__toggle-answer-button">Show Answer</button>
+          <button class="card__toggle-answer-button" data-js="toggle-answer">
+            Show Answer
+          </button>
           <ul class="card__tag-list">
             <li>HTML</li>
             <li>CSS</li>
@@ -312,12 +282,9 @@
           </button>
         </li>
         <li class="navigation-item">
-          <button
-            class="color-inherit js-bookmark-button"
-            data-js="bookmarkButton"
-          >
+          <button class="color-inherit" data-js="bookmarkButton">
             <i
-              class="fas fa-bookmark navigation-item__icon js-bookmark-icon"
+              class="fas fa-bookmark navigation-item__icon"
               data-js="bookmarkIcon"
             ></i
             ><span class="sr-only">Bookmarks</span>
