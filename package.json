@@ -1,0 +1,39 @@
+{
+  "private": true,
+  "name": "quiz-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "css:check": "npx stylelint **/*.css",
+    "css:fix": "npx stylelint **/*.css --fix",
+    "html:check": "npx htmlhint **/*.html",
+    "prettier:check": "npx prettier --check .",
+    "prettier:fix": "npx prettier --write .",
+    "test": "npm run html:check && npm run css:check && npm run prettier:check",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "**/*.css": "npm run css:fix",
+    "**/*": "npm run prettier:fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PReichetanz/quiz-app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PReichetanz/quiz-app/issues"
+  },
+  "homepage": "https://github.com/PReichetanz/quiz-app#readme",
+  "devDependencies": {
+    "htmlhint": "^0.15.2",
+    "husky": "^7.0.2",
+    "lint-staged": "^11.2.3",
+    "prettier": "2.4.1",
+    "stylelint": "^13.13.1",
+    "stylelint-config-prettier": "^9.0.2",
+    "stylelint-config-standard": "^22.0.0"
+  }
+}
