@@ -1,95 +1,124 @@
-/* TOGGLE ANSWER ON QUESTION CARD */
+/* SHOW ANSWER BUTTONS */
+const cards = getAllElements("card");
 
-const toggleAnswerButton = document.querySelector(".js-toggle-answer");
-const answer = document.querySelector(".js-answer-text");
-const answerHeading = document.querySelector(".js-answer-heading");
+cards.forEach((card) => {
+  const button = getElement("toggle-answer", card);
+  const answerHeading = getElement("answer-heading", card);
+  const answer = getElement("answer", card);
 
-toggleAnswerButton.addEventListener("click", () => {
-  answerHeading.classList.toggle("hidden");
-  answer.classList.toggle("hidden");
+  button.addEventListener("click", () => {
+    answerHeading.classList.toggle("hidden");
+    answer.classList.toggle("hidden");
+  });
 });
 
 /* TOGGLE BOOKMARK */
 
-const bookmark = document.querySelector(".js-bookmark");
+const bookmarks = getAllElements("bookmark");
 
-bookmark.addEventListener("click", () => {
-  bookmark.classList.toggle("card__bookmark--active");
+bookmarks.forEach((bookmark) => {
+  bookmark.addEventListener("click", () => {
+    bookmark.classList.toggle("card__bookmark--active");
+  });
 });
 
-/* CHANGE NAVIGATION TAB */
+/* NAVIGATION */
 
-const homeButton = document.querySelector(".js-home-button");
-const bookmarksButton = document.querySelector(".js-bookmark-button");
-const createButton = document.querySelector(".js-create-button");
-const profileButton = document.querySelector(".js-profile-button");
+const homeButton = getElement("homeButton");
+const bookmarksButton = getElement("bookmarkButton");
+const createButton = getElement("createCardButton");
+const profileButton = getElement("profileButton");
 
-const homeSection = document.querySelector(".js-questions");
-const bookmarkSection = document.querySelector(".js-bookmarks");
-const createSection = document.querySelector(".js-create");
-const profileSection = document.querySelector(".js-profile");
+const homeSection = getElement("questions");
+const bookmarkSection = getElement("bookmarks");
+const createSection = getElement("createCard");
+const profileSection = getElement("profile");
 
-const homeIcon = document.querySelector(".js-home-icon");
-const bookmarkIcon = document.querySelector(".js-bookmark-icon");
-const createIcon = document.querySelector(".js-create-icon");
-const profileIcon = document.querySelector(".js-profile-icon");
+const homeIcon = getElement("homeIcon");
+const bookmarkIcon = getElement("bookmarkIcon");
+const createCardIcon = getElement("createCardIcon");
+const profileIcon = getElement("profileIcon");
 
-const heading = document.querySelector(".js-heading");
+const heading = getElement("mainHeading");
 
 homeButton.addEventListener("click", () => {
-  homeSection.classList.remove("hidden");
-  bookmarkSection.classList.add("hidden");
-  createSection.classList.add("hidden");
-  profileSection.classList.add("hidden");
+  showSection(homeSection);
+  hideSection(bookmarkSection);
+  hideSection(createSection);
+  hideSection(profileSection);
 
-  homeIcon.classList.add("navigation-item--active");
-  bookmarkIcon.classList.remove("navigation-item--active");
-  createIcon.classList.remove("navigation-item--active");
-  profileIcon.classList.remove("navigation-item--active");
+  addHighlighting(homeIcon);
+  removeHighlighting(bookmarkIcon);
+  removeHighlighting(createCardIcon);
+  removeHighlighting(profileIcon);
 
   heading.textContent = "Quiz-App";
 });
 
 bookmarksButton.addEventListener("click", () => {
-  homeSection.classList.add("hidden");
-  bookmarkSection.classList.remove("hidden");
-  createSection.classList.add("hidden");
-  profileSection.classList.add("hidden");
+  hideSection(homeSection);
+  showSection(bookmarkSection);
+  hideSection(createSection);
+  hideSection(profileSection);
 
-  homeIcon.classList.remove("navigation-item--active");
-  bookmarkIcon.classList.add("navigation-item--active");
-  createIcon.classList.remove("navigation-item--active");
-  profileIcon.classList.remove("navigation-item--active");
+  removeHighlighting(homeIcon);
+  addHighlighting(bookmarkIcon);
+  removeHighlighting(createCardIcon);
+  removeHighlighting(profileIcon);
 
   heading.textContent = "Bookmarks";
 });
 
 createButton.addEventListener("click", () => {
-  homeSection.classList.add("hidden");
-  bookmarkSection.classList.add("hidden");
-  createSection.classList.remove("hidden");
-  profileSection.classList.add("hidden");
+  hideSection(homeSection);
+  hideSection(bookmarkSection);
+  showSection(createSection);
+  hideSection(profileSection);
 
-  homeIcon.classList.remove("navigation-item--active");
-  bookmarkIcon.classList.remove("navigation-item--active");
-  createIcon.classList.add("navigation-item--active");
-  profileIcon.classList.remove("navigation-item--active");
+  removeHighlighting(homeIcon);
+  removeHighlighting(bookmarkIcon);
+  addHighlighting(createCardIcon);
+  removeHighlighting(profileIcon);
 
-  heading.textContent = "Create Question";
+  heading.textContent = "Create Card";
 });
 
 profileButton.addEventListener("click", () => {
-  homeSection.classList.add("hidden");
-  bookmarkSection.classList.add("hidden");
-  createSection.classList.add("hidden");
-  profileSection.classList.remove("hidden");
+  hideSection(homeSection);
+  hideSection(bookmarkSection);
+  hideSection(createSection);
+  showSection(profileSection);
 
-  homeIcon.classList.remove("navigation-item--active");
-  bookmarkIcon.classList.remove("navigation-item--active");
-  createIcon.classList.remove("navigation-item--active");
-  profileIcon.classList.add("navigation-item--active");
+  removeHighlighting(homeIcon);
+  removeHighlighting(bookmarkIcon);
+  removeHighlighting(createCardIcon);
+  addHighlighting(profileIcon);
 
   heading.textContent = "Profile";
 });
 
-/* SET NAVIGATION ACTIVE BUTTON */
+function showSection(section) {
+  section.classList.remove("hidden");
+}
+
+function hideSection(section) {
+  section.classList.add("hidden");
+}
+
+function addHighlighting(icon) {
+  icon.classList.add("navigation-item--active");
+}
+
+function removeHighlighting(icon) {
+  icon.classList.remove("navigation-item--active");
+}
+
+/* USABILITY FUNCTIONS */
+
+function getElement(dataJS, target = document) {
+  return target.querySelector(`[data-js=${dataJS}]`);
+}
+
+function getAllElements(dataJS, target = document) {
+  return target.querySelectorAll(`[data-js=${dataJS}]`);
+}
