@@ -222,6 +222,7 @@
           class="creating-card-form"
           action=""
           aria-labelledby="creating-card"
+          data-js="createCardForm"
         >
           <div class="creating-card__input-area">
             <label class="creating-card__input-label" for="question"
@@ -233,6 +234,7 @@
               cols="30"
               rows="5"
               placeholder="What is the original (i.e. latin/greek) plural of 'comma'?"
+              data-js="createCardQuestion"
             ></textarea>
           </div>
           <div class="creating-card__input-area">
@@ -245,13 +247,19 @@
               cols="30"
               rows="5"
               placeholder="commata"
+              data-js="createCardAnswer"
             ></textarea>
           </div>
           <div class="creating-card__input-area">
             <label class="creating-card__input-label" for="tags"
               >Add related tags (separated by commas):</label
             >
-            <input type="text" id="tags" placeholder="semicolon, colon" />
+            <input
+              type="text"
+              id="tags"
+              placeholder="semicolon, colon"
+              data-js="createCardTags"
+            />
           </div>
           <input
             class="creating-card__submit-button"

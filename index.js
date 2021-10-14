@@ -113,6 +113,25 @@ function removeHighlighting(icon) {
   icon.classList.remove("navigation-item--active");
 }
 
+/* CREATE CARD FORM */
+const createCardForm = getElement("createCardForm");
+/* PREVENT DEFAULT*/
+createCardForm.addEventListener("submit", (event) => event.preventDefault());
+
+const createCardQuestion = getElement("createCardQuestion");
+const createCardAnswer = getElement("createCardAnswer");
+const createCardTags = getElement("createCardTags");
+
+console.log(createCardQuestion);
+console.log(createCardAnswer);
+console.log(createCardTags);
+
+createCardForm.addEventListener("submit", () => {
+  console.log(createCardQuestion.value);
+  console.log(createCardAnswer.value);
+  console.log(createCardTags.value);
+});
+
 /* USABILITY FUNCTIONS */
 
 function getElement(dataJS, target = document) {
