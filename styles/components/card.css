@@ -6,14 +6,16 @@
   position: relative;
 }
 
+.card + .card {
+  margin-top: 1rem;
+}
+
 .card__question-text {
   text-align: justify;
 }
 
 .card__bookmark {
   border: none;
-  /* width: 30px;
-  height: 10px; */
   background-color: transparent;
   position: absolute;
   top: -5px;
@@ -24,15 +26,6 @@
   color: var(--color-light);
   font-size: 2rem;
 }
-
-/* .card__bookmark::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 100%;
-  border: 10px solid var(--color-light);
-  border-bottom-color: transparent; 
-} */
 
 .card__bookmark--active {
   color: var(--color-mediumblue);

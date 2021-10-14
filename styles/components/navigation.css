@@ -11,11 +11,11 @@
 
 .navigation ul,
 .navigation li,
-.navigation a {
+.navigation button {
   display: contents;
 }
 
-.nav-item {
+.navigation-item {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -23,26 +23,16 @@
   width: 25%;
 }
 
-.nav-item--active {
+.navigation-item--active {
   background-color: var(--color-light);
   color: var(--color-darkblue);
 }
 
-.nav-item__icon {
+.navigation-item__icon {
   display: block;
   padding: 1rem 1rem;
   height: 100%;
   font-size: 1.5rem;
   text-align: center;
   align-self: center;
-}
-
-.sr-only:not(:focus):not(:active) {
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
 }
