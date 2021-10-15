@@ -123,20 +123,55 @@ const createCardQuestion = getElement("createCardQuestion");
 const createCardAnswer = getElement("createCardAnswer");
 const createCardTags = getElement("createCardTags");
 
+// CREATE HTML FOR CARD
 let cardContainer = createHTML();
 let cardContainerChildren = cardContainer.children;
 console.log(cardContainerChildren);
 
+// TAKE INPUT VALUES OF FORM
 createCardForm.addEventListener("submit", () => {
-  const questionText = createCardQuestion.value;
-  const answerText = createCardAnswer.value;
-  const tagsText = createCardTags.value;
+  const questionTextInput = createCardQuestion.value;
+  const answerTextInput = createCardAnswer.value;
 
+  // LOOP OVER NODELIST TO REACH HTML ELEMENTS ON NEW CARD
   for (let i = 0; i < cardContainerChildren.length; i++) {
-    cardContainerChildren[2].textContent = questionText;
-    cardContainerChildren[5].textContent = answerText;
+    //
+    const questionTextOutput = cardContainerChildren[2];
+    const toggleAnswerButton = cardContainerChildren[3];
+    const answerHeadingOutput = cardContainerChildren[4];
+    const answerTextOutput = cardContainerChildren[5];
+
+    questionTextOutput.textContent = questionTextInput;
+    answerTextOutput.textContent = answerTextInput;
+    // SHOW ANSWER BUTTON OF NEW CARD
+    toggleAnswerButton.addEventListener("click", () => {
+      answerHeadingOutput.classList.toggle("hidden");
+      answerTextOutput.classList.toggle("hidden");
+    });
+    // BOOKMARK TOGGLE OF NEW CARD
+    const toggleBookmarkOutput = cardContainerChildren[0].childNodes[1];
+
+    toggleBookmarkOutput.addEventListener("click", () => {
+      toggleBookmarkOutput.classList.toggle("card__bookmark--active");
+    });
+    // CREATE TAGS ON NEW CARD
   }
+  const tagsInputArray = createCardTags.value.split(", ");
+  createTagList(tagsInputArray);
+
   console.log(cardContainer);
+  function createTagList(tagsInputArray) {
+    for (let j = 0; j < tagsInputArray.length; j++) {
+      let tag = tagsInputArray[j];
+      let tagListItem = document.createElement("li");
+      tagListItem.textContent = tag;
+      console.log(tagListItem);
+
+      const newCardTagList = cardContainerChildren[6];
+      console.log(newCardTagList);
+      newCardTagList.insertAdjacentElement("beforeend", tagListItem);
+    }
+  }
 
   createCardForm.insertAdjacentElement("afterend", cardContainer);
 });
@@ -170,10 +205,6 @@ function createHTML() {
           The answer is 42.
         </p>
         <ul class="card__tag-list">
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>JS</li>
-          <li>Clean Code</li>
         </ul>
         </div>`;
 
