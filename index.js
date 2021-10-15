@@ -118,11 +118,6 @@ const createCardForm = getElement("createCardForm");
 /* PREVENT DEFAULT*/
 createCardForm.addEventListener("submit", (event) => event.preventDefault());
 
-/* GET INPUT FROM FORM AND CREATE NEW CARD */
-const createCardQuestion = getElement("createCardQuestion");
-const createCardAnswer = getElement("createCardAnswer");
-const createCardTags = getElement("createCardTags");
-
 // CREATE HTML FOR CARD
 let cardContainer = createHTML();
 let cardContainerChildren = cardContainer.children;
@@ -130,8 +125,11 @@ console.log(cardContainerChildren);
 
 // TAKE INPUT VALUES OF FORM
 createCardForm.addEventListener("submit", () => {
-  const questionTextInput = createCardQuestion.value;
-  const answerTextInput = createCardAnswer.value;
+  const createCardQuestion = getElement("createCardQuestion");
+  const createCardAnswer = getElement("createCardAnswer");
+
+  let questionTextInput = createCardQuestion.value;
+  let answerTextInput = createCardAnswer.value;
 
   // LOOP OVER NODELIST TO REACH HTML ELEMENTS ON NEW CARD
   for (let i = 0; i < cardContainerChildren.length; i++) {
@@ -154,27 +152,33 @@ createCardForm.addEventListener("submit", () => {
     toggleBookmarkOutput.addEventListener("click", () => {
       toggleBookmarkOutput.classList.toggle("card__bookmark--active");
     });
-    // CREATE TAGS ON NEW CARD
   }
+
+  // CREATE TAGS ON NEW CARD
+  const createCardTags = getElement("createCardTags");
   const tagsInputArray = createCardTags.value.split(", ");
   createTagList(tagsInputArray);
 
-  console.log(cardContainer);
   function createTagList(tagsInputArray) {
     for (let j = 0; j < tagsInputArray.length; j++) {
       let tag = tagsInputArray[j];
       let tagListItem = document.createElement("li");
       tagListItem.textContent = tag;
-      console.log(tagListItem);
 
       const newCardTagList = cardContainerChildren[6];
-      console.log(newCardTagList);
       newCardTagList.insertAdjacentElement("beforeend", tagListItem);
     }
   }
 
   createCardForm.insertAdjacentElement("afterend", cardContainer);
+  resetForm(createCardQuestion, createCardAnswer, createCardTags);
 });
+
+function resetForm(question, answer, tags) {
+  question.value = "";
+  answer.value = "";
+  tags.value = "";
+}
 
 function createHTML() {
   let card = document.createElement("div");
