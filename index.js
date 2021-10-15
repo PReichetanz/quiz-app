@@ -118,19 +118,67 @@ const createCardForm = getElement("createCardForm");
 /* PREVENT DEFAULT*/
 createCardForm.addEventListener("submit", (event) => event.preventDefault());
 
+/* GET INPUT FROM FORM AND CREATE NEW CARD */
 const createCardQuestion = getElement("createCardQuestion");
 const createCardAnswer = getElement("createCardAnswer");
 const createCardTags = getElement("createCardTags");
 
-console.log(createCardQuestion);
-console.log(createCardAnswer);
-console.log(createCardTags);
+let cardContainer = createHTML();
+let cardContainerChildren = cardContainer.children;
+console.log(cardContainerChildren);
 
 createCardForm.addEventListener("submit", () => {
-  console.log(createCardQuestion.value);
-  console.log(createCardAnswer.value);
-  console.log(createCardTags.value);
+  const questionText = createCardQuestion.value;
+  const answerText = createCardAnswer.value;
+  const tagsText = createCardTags.value;
+
+  for (let i = 0; i < cardContainerChildren.length; i++) {
+    cardContainerChildren[2].textContent = questionText;
+    cardContainerChildren[5].textContent = answerText;
+  }
+  console.log(cardContainer);
+
+  createCardForm.insertAdjacentElement("afterend", cardContainer);
 });
+
+function createHTML() {
+  let card = document.createElement("div");
+  card.setAttribute("class", "card");
+  card.setAttribute("data-js", "card");
+  card.innerHTML = `<button class="card__bookmark">
+          <i
+            class="card__bookmark card__bookmark-icon fas fa-bookmark"
+            data-js="bookmark"
+          ></i>
+        </button>
+        <h2 class="mx-1rem">Question:</h2>
+        <p class="card__question-text mx-1rem" data-js="question">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis
+          quaerat asperiores, eius alias doloribus ut doloremque laudantium
+          soluta ipsum enim!
+        </p>
+        <button class="card__toggle-answer-button" data-js="toggle-answer">
+          Show Answer
+        </button>
+        <h2
+          class="card__answer-heading hidden mx-1rem"
+          data-js="answer-heading"
+        >
+          Answer:
+        </h2>
+        <p class="card__answer-text hidden mx-1rem" data-js="answer">
+          The answer is 42.
+        </p>
+        <ul class="card__tag-list">
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JS</li>
+          <li>Clean Code</li>
+        </ul>
+        </div>`;
+
+  return card;
+}
 
 /* USABILITY FUNCTIONS */
 
