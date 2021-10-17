@@ -119,8 +119,8 @@ const createCardForm = getElement("createCardForm");
 createCardForm.addEventListener("submit", (event) => event.preventDefault());
 
 // CREATE HTML FOR CARD
-let cardContainer = createHTML();
-let cardContainerChildren = cardContainer.children;
+const cardContainer = createHTML();
+const cardContainerChildren = cardContainer.children;
 console.log(cardContainerChildren);
 
 // TAKE INPUT VALUES OF FORM
@@ -128,8 +128,8 @@ createCardForm.addEventListener("submit", () => {
   const createCardQuestion = getElement("createCardQuestion");
   const createCardAnswer = getElement("createCardAnswer");
 
-  let questionTextInput = createCardQuestion.value;
-  let answerTextInput = createCardAnswer.value;
+  const questionTextInput = createCardQuestion.value;
+  const answerTextInput = createCardAnswer.value;
 
   // LOOP OVER NODELIST TO REACH HTML ELEMENTS ON NEW CARD
   for (let i = 0; i < cardContainerChildren.length; i++) {
@@ -156,13 +156,13 @@ createCardForm.addEventListener("submit", () => {
 
   // CREATE TAGS ON NEW CARD
   const createCardTags = getElement("createCardTags");
-  const tagsInputArray = createCardTags.value.split(", ");
+  const tagsInputArray = createCardTags.value.split(",");
   createTagList(tagsInputArray);
 
   function createTagList(tagsInputArray) {
     for (let j = 0; j < tagsInputArray.length; j++) {
-      let tag = tagsInputArray[j];
-      let tagListItem = document.createElement("li");
+      const tag = tagsInputArray[j].trim();
+      const tagListItem = document.createElement("li");
       tagListItem.textContent = tag;
 
       const newCardTagList = cardContainerChildren[6];
@@ -181,7 +181,7 @@ function resetForm(question, answer, tags) {
 }
 
 function createHTML() {
-  let card = document.createElement("div");
+  const card = document.createElement("div");
   card.setAttribute("class", "card");
   card.setAttribute("data-js", "card");
   card.innerHTML = `<button class="card__bookmark">
