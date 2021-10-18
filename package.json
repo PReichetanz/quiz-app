@@ -10,7 +10,8 @@
     "html:check": "npx htmlhint **/*.html",
     "prettier:check": "npx prettier --check .",
     "prettier:fix": "npx prettier --write .",
-    "test": "npm run html:check && npm run css:check && npm run prettier:check",
+    "test:watch": "NODE_OPTIONS=--experimental-vm-modules npx jest --watch",
+    "test": "npm run html:check && npm run css:check && npm run prettier:check && NODE_OPTIONS=--experimental-vm-modules npx jest",
     "prepare": "husky install"
   },
   "lint-staged": {
@@ -30,6 +31,7 @@
   "devDependencies": {
     "htmlhint": "^0.15.2",
     "husky": "^7.0.2",
+    "jest": "^27.3.0",
     "lint-staged": "^11.2.3",
     "prettier": "2.4.1",
     "stylelint": "^13.13.1",
