@@ -1,77 +1,91 @@
 import { getElement } from './utility.js'
 
-export const homeButton = getElement('homeButton')
-export const bookmarksButton = getElement('bookmarkButton')
-export const createButton = getElement('createCardButton')
-export const profileButton = getElement('profileButton')
+export function createNavigation() {
+  const homeButton = getElement('homeButton')
+  const bookmarksButton = getElement('bookmarkButton')
+  const createButton = getElement('createCardButton')
+  const profileButton = getElement('profileButton')
 
-const homeSection = getElement('questions')
-const bookmarkSection = getElement('bookmarks')
-const createSection = getElement('createCard')
-const profileSection = getElement('profile')
+  const homeSection = getElement('questions')
+  const bookmarkSection = getElement('bookmarks')
+  const createSection = getElement('createCard')
+  const profileSection = getElement('profile')
 
-const homeIcon = getElement('homeIcon')
-const bookmarkIcon = getElement('bookmarkIcon')
-const createCardIcon = getElement('createCardIcon')
-const profileIcon = getElement('profileIcon')
+  const homeIcon = getElement('homeIcon')
+  const bookmarkIcon = getElement('bookmarkIcon')
+  const createCardIcon = getElement('createCardIcon')
+  const profileIcon = getElement('profileIcon')
 
-const heading = getElement('mainHeading')
+  const heading = getElement('mainHeading')
 
-homeButton.addEventListener('click', () => {
-  showSection(homeSection)
-  hideSection(bookmarkSection)
-  hideSection(createSection)
-  hideSection(profileSection)
+  function goToProfile() {
+    profileButton.addEventListener('click', () => {
+      hideSection(homeSection)
+      hideSection(bookmarkSection)
+      hideSection(createSection)
+      showSection(profileSection)
 
-  addHighlighting(homeIcon)
-  removeHighlighting(bookmarkIcon)
-  removeHighlighting(createCardIcon)
-  removeHighlighting(profileIcon)
+      removeHighlighting(homeIcon)
+      removeHighlighting(bookmarkIcon)
+      removeHighlighting(createCardIcon)
+      addHighlighting(profileIcon)
 
-  heading.textContent = 'Quiz-App'
-})
+      heading.textContent = 'Profile'
+    })
+  }
 
-bookmarksButton.addEventListener('click', () => {
-  hideSection(homeSection)
-  showSection(bookmarkSection)
-  hideSection(createSection)
-  hideSection(profileSection)
+  function goToCreate() {
+    createButton.addEventListener('click', () => {
+      hideSection(homeSection)
+      hideSection(bookmarkSection)
+      showSection(createSection)
+      hideSection(profileSection)
 
-  removeHighlighting(homeIcon)
-  addHighlighting(bookmarkIcon)
-  removeHighlighting(createCardIcon)
-  removeHighlighting(profileIcon)
+      removeHighlighting(homeIcon)
+      removeHighlighting(bookmarkIcon)
+      addHighlighting(createCardIcon)
+      removeHighlighting(profileIcon)
 
-  heading.textContent = 'Bookmarks'
-})
+      heading.textContent = 'Create Card'
+    })
+  }
 
-createButton.addEventListener('click', () => {
-  hideSection(homeSection)
-  hideSection(bookmarkSection)
-  showSection(createSection)
-  hideSection(profileSection)
+  function goToBookmarks() {
+    bookmarksButton.addEventListener('click', () => {
+      hideSection(homeSection)
+      showSection(bookmarkSection)
+      hideSection(createSection)
+      hideSection(profileSection)
 
-  removeHighlighting(homeIcon)
-  removeHighlighting(bookmarkIcon)
-  addHighlighting(createCardIcon)
-  removeHighlighting(profileIcon)
+      removeHighlighting(homeIcon)
+      addHighlighting(bookmarkIcon)
+      removeHighlighting(createCardIcon)
+      removeHighlighting(profileIcon)
 
-  heading.textContent = 'Create Card'
-})
+      heading.textContent = 'Bookmarks'
+    })
+  }
 
-profileButton.addEventListener('click', () => {
-  hideSection(homeSection)
-  hideSection(bookmarkSection)
-  hideSection(createSection)
-  showSection(profileSection)
+  function goToHome() {
+    homeButton.addEventListener('click', () => {
+      showSection(homeSection)
+      hideSection(bookmarkSection)
+      hideSection(createSection)
+      hideSection(profileSection)
 
-  removeHighlighting(homeIcon)
-  removeHighlighting(bookmarkIcon)
-  removeHighlighting(createCardIcon)
-  addHighlighting(profileIcon)
+      addHighlighting(homeIcon)
+      removeHighlighting(bookmarkIcon)
+      removeHighlighting(createCardIcon)
+      removeHighlighting(profileIcon)
 
-  heading.textContent = 'Profile'
-})
+      heading.textContent = 'Quiz-App'
+    })
+  }
+  goToHome()
+  goToBookmarks()
+  goToCreate()
+  goToProfile()
+}
 
 function showSection(section) {
   section.classList.remove('hidden')
