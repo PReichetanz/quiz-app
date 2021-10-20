@@ -10,11 +10,14 @@
     "html:check": "npx htmlhint **/*.html",
     "prettier:check": "npx prettier --check .",
     "prettier:fix": "npx prettier --write .",
-    "test": "npm run html:check && npm run css:check && npm run prettier:check",
+    "js:check": "npx eslint .",
+    "js:fix": "npx eslint . --fix",
+    "test": "npm run html:check && npm run css:check && npm run prettier:check && npm run js:check",
     "prepare": "husky install"
   },
   "lint-staged": {
     "**/*.css": "npm run css:fix",
+    "**/*.js": "npm run js:fix",
     "**/*": "npm run prettier:fix"
   },
   "repository": {
@@ -28,6 +31,8 @@
   },
   "homepage": "https://github.com/PReichetanz/quiz-app#readme",
   "devDependencies": {
+    "eslint": "^8.0.1",
+    "eslint-config-prettier": "^8.3.0",
     "htmlhint": "^0.15.2",
     "husky": "^7.0.2",
     "lint-staged": "^11.2.3",
